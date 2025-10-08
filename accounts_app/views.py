@@ -3,4 +3,9 @@ from django.shortcuts import render,HttpResponse
 
 
 def profile(request , username):
- return HttpResponse("This Is Mamad profile"),
+    return HttpResponse(f"This Is {username} profile")
+
+
+
+def info(request):
+    return HttpResponse(f"This Is info page")
