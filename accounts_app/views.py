@@ -6,4 +6,4 @@ def profile(request , username) :
 
 
 def info(request):
-    return HttpResponse(f"This Is info page")
+    return render(request, "accounts_app/info .html")
