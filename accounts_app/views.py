@@ -25,6 +25,10 @@ users = [
     }
 ]
 
+def userslist(request):
+    # user_list = users
+    return render(request, 'accounts_app/users_list.html' , context= {'user_list': users})
+    
 def profile(request, username):
     for user in users:
         if user['username'] == username:
