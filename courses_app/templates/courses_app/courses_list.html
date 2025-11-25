@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
     <title>courses list</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>courses list</h1>
-        <hr>
-          {% for cours in courses_list %}
-<h2>{{ cours.titel }}</h2>
-<h2>{{ cours.description }}</h2>
-        {% enfor %}
+      <h1>courses list</h1>
+      <hr />
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">title</th>
+            <th scope="col">description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in courses_list %}
+            <tr>
+              <th scope="row">{{ forloop.counter}}</th>
+              <td>{{course.title}}</td>
+              <td>{{ course.description}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
-</body>
+  </body>
 </html>
