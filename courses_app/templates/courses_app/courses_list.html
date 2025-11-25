@@ -16,14 +16,18 @@
             <th scope="col">#</th>
             <th scope="col">title</th>
             <th scope="col">description</th>
+            <th scope="col">situation</th>
+            <th scope="col">views</th>
           </tr>
         </thead>
         <tbody>
           {% for course in courses_list %}
             <tr>
-              <th scope="row">{{ forloop.counter}}</th>
-              <td>{{course.title}}</td>
-              <td>{{ course.description}}</td>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ course.title }}</td>
+              <td>{{ course.description }}</td>
+              <td>{{course.situation}}</td>   
+              <td>{{course.views}}</td>   
             </tr>
           {% endfor %}
         </tbody>
