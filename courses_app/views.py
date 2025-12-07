@@ -9,4 +9,6 @@ def courses_list(request):
 
 def course_detail(request, id):
     course = get_object_or_404(Course, id=id)
+    course.views += 1
+    course.save()
     return render(request, "courses_app/course_detail.html", {'course': course})
